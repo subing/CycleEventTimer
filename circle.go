@@ -28,14 +28,14 @@ type indata struct {
 
 type callbackFunc func([]interface{})
 
-// NewCircleTimer
-func NewCircleTimer(part int, intevel time.Duration, callback callbackFunc) *CirCle {
+// NewCircleTimer 构造
+func NewCircleTimer(part int, intevel time.Duration, callback callbackFunc) *CircleEvent {
 	part++
 	setlist := make([]*Set, part)
 	for i := 0; i < part; i++ {
 		setlist[i] = NewSet()
 	}
-	c := &CirCle{
+	c := &CircleEvent{
 		list:    setlist,
 		part:    part,
 		bindmap: make(map[interface{}]int),

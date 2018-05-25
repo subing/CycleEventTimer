@@ -1,4 +1,4 @@
-package circle_queue
+package cycle_timer_event
 
 type Set struct {
 	list map[interface{}]bool
