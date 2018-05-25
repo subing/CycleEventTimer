@@ -104,7 +104,7 @@ func (c *CircleEvent) put(in indata) {
 
 func (c *CircleEvent) task(intevel time.Duration) {
 	//
-	timer := time.NewTimer(intevel)
+	timer := time.NewTicker(intevel)
 	for {
 		select {
 		case in := <-c.taskIn:
@@ -118,8 +118,6 @@ func (c *CircleEvent) task(intevel time.Duration) {
 
 		case <-timer.C:
 			c.tick()
-			// 重置定时器
-			timer.Reset(intevel)
 
 		case <-c.closed:
 			return
