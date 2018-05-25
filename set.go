@@ -1,4 +1,4 @@
-package cycle_timer_event
+package CycleEventTimer
 
 type Set struct {
 	list map[interface{}]bool

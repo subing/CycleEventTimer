@@ -1,8 +1,8 @@
-package cycle_timer_event
+package CycleEventTimer
 
 import "time"
 
-//CirCleEvent 循环定时事件
+//CircleEvent 循环定时事件
 type CircleEvent struct {
 	// 这个环由多少个块构成
 	part int
